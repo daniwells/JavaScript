@@ -27,7 +27,7 @@
         }
 
     </style>
-    <title>My First Program With JS</title>
+    <title>Document</title>
 </head>
 <body>
     <main>
@@ -36,10 +36,19 @@
     </main>
 
     <script>
-        window.alert('My first Message!') //alert para uma mensagem
-        window.confirm('Is do you like JS?') // alert para uma pergunta de aceitar ou cancelar
-        window.prompt("What's your name?") //alert para um input
-    </script>
 
+        var n1 = Number.parseInt(window.prompt('Enter the first number'))
+       
+
+        var n2 = Number.parseFloat(window.prompt('Enter the second number'))
+     
+      
+        var n3 = Number(window.prompt('Enter the third number'))
+
+        var n4 = n1 + n2 + n3
+
+        window.alert(`The sum of both numbers is: ${String(n4)}`)
+
+    </script>
 </body>
 </html>

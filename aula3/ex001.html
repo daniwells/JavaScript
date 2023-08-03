@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            width: 95vw;
+            height: 95vh;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(102, 91, 204); 
+        }
+
+        main {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        button:hover{
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Learning about DOM</title>
+</head>
+<body>
+    <main>
+        <h1>Startying studies with DOM</h1>
+        <p>Press to the botton</p>
+        <button onclick="press()" >Click Me</button>
+        <p id="pr" name="pr" class="pr">>>>>>> The result is here. <<<<<<</p>
+    </main>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1]
+
+        function press(){
+            p1.innerText = 'Hello World!'
+            p1.style.color = 'brown'
+            p1.style.fontSize = '30px'
+            p1.style.fontWeight = 'bolder'
+        }
+
+        //TAG
+        //window.document.write(p1.innerText)
+        //p1.style.color = 'blue'
+        //document.write(p1.innerHTML)
+        //window.alert(p1.innerText)
+
+        //ID
+        //var p2 = window.document.getElementById('pr')
+        //p2.style.background = 'rgb(102, 91, 204)'
+        //p2.innerText = 'Waiting'
+        //ou
+        //var p2 = window.document.getElementById('pr').innerText = 'Waiting'
+
+        //NAME
+        //var p2 = window.document.getElementsByName('pr')[0].innerText = 'Waiting'
+
+        //CLASS
+        //var p2 = window.document.getElementsByClassName('pr')[0].innerText = 'Waiting'
+
+        //QUERY SELECTOR
+        //var p2 = window.document.querySelector('p#pr').innerText = "Waiting"
+    </script>
+</body>
+</html>
