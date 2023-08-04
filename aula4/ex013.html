@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 25px;
+            font-size: 15px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Calculations</title>
+</head>
+<body>
+    <h1>Calculations</h1>
+    <button class="but" onclick="press()" >Click me to calculate</button>
+    <p>The result goes here...</p>
+
+    <script>
+        function press(){
+
+            var num1 = window.prompt("Enter a number")
+
+            var but = document.querySelector('button.but')
+            var result = document.getElementsByTagName('p')[0]
+
+            var absolute = Math.abs(num1)
+            var integer = Math.trunc(num1)
+            var prox = Math.round(num1)
+            var raiz = num1 ** (1/2)
+            var raiz2 = num1 ** (1/3)
+            var pot = num1 ** 2
+            var pot2 = num1 ** 3
+
+            result.innerHTML = `The value in analysis is ${num1}`
+            result.innerHTML += '<p>--------------------------------------------------------------------------------------------------------</p>' 
+            result.innerHTML += `<p>The absolute value is: ${absolute}</p>`
+            result.innerHTML += `<p>The integer part is: ${integer}</p>`
+            result.innerHTML += `<p>The integer value closest is: ${prox}</p>`
+            result.innerHTML += `<p>The square root is: ${raiz}</p>`
+            result.innerHTML += `<p>The root cubic is: ${raiz2}</p>`
+            result.innerHTML += `<p>The exponential for 2 is: ${pot}</p>`
+            result.innerHTML += `<p>The exponential for 3 is: ${pot2}</p>`
+        }
+    </script>
+
+</body>
+</html>

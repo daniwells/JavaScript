@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Working With Data</title>
+</head>
+<body>
+    <h1>Calculate</h1>
+    <button class="but" onclick="press()" >Click me!</button>
+    <p>The result is here...</p>
+
+    <script>
+
+        window.alert('Welcome to the mato!')
+
+        function press(){
+
+            var num1 = Number(window.prompt("Enter a number"))
+
+            var but = document.querySelector('button.but')
+            var result = document.getElementsByTagName('p')[0]
+
+            double = num1 * 2
+            half = num1 / 2 
+
+            result.innerHTML = `The double of ${num1} is ${double} and the half is ${half}.`
+        }
+    </script>
+
+</body>
+</html>

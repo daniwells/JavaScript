@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input#but{
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 15px;
+        }
+    </style>
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Fines Sistem</h1>
+    <label for="vel">Speed Of Car: </label>
+    <input type="number" name="vel" id="vel" placeholder="Enter The Speed" >
+    <br>
+    <input type="button" value="Verify" id="but" onclick="verify()">
+
+    <p>The result is here...</p>
+
+    <script>
+        function verify(){
+            var num1 = document.querySelector('input#vel')
+            var n1 = Number(num1.value)
+
+            var result = document.getElementsByTagName('p')[0]
+
+            var limit_speed = 80.5
+
+            result.innerHTML = `The limit speed is ${limit_speed} and you are driver in ${n1}KM for hour...`
+
+            if (n1 >= limit_speed){
+                var r = result.innerHTML += `<p>Do you past the speed limit. You will be FINED!!</p>`
+                
+                r.style.color = 'red'
+                
+            }
+
+        }
+    </script>
+</body>
+</html>

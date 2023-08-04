@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 95vw;
+            height: 95vh;
+           
+        }
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        p {
+            margin-top: 20px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>What country are you from? </h1><br>
+        <label for="country">Country: </label><br>
+        <input type="text" name="country" id="country" placeholder="Enter Country">
+        <input type="button" value="VERIFY" id="verify" onclick="verify()">
+        
+        <p>The result goes here...</p>
+
+        <script>
+            function verify(){
+                var country = document.querySelector('input#country')
+                var c = String(country.value)
+                c = c.toUpperCase()
+
+                var result = document.getElementsByTagName('p')[0]
+
+                if (c    == 'BRASIL' || country == 'BR'){
+                    result.innerHTML = 'Brasileiro'
+                }else{
+                    result.innerHTML = 'Foreiger'
+                }
+            }
+        </script>
+
+    </main>
+    
+</body>
+</html>
