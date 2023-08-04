@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 95vw;
+            height: 95vh;
+        }
+
+        div{
+            font-weight: bolder;
+            font-size: 25px;
+            background-color: brown;
+            color: white;
+            width: 25%;
+            height: 40%;
+            text-align: center;
+            line-height: 350px;
+        }
+        
+        div:hover {
+            cursor: pointer;
+        }
+
+    </style>
+    <title>DOM Events</title>
+</head>
+<body>
+    <div id="area">
+        <p>Counter</p>
+    </div>
+
+    <!-- onclick="press()" onmouseenter="enter()" onmouseout="leave()" -->
+
+    <script>
+        
+        var cont = 0
+        var div1 = window.document.getElementById('area')
+
+        div1.addEventListener('click', press)
+        div1.addEventListener('mouseenter', enter)
+        div1.addEventListener('mouseout', leave)
+
+        function press(){
+            div1.style.backgroundColor = 'black'
+            var p = document.getElementsByTagName('p')[0]
+            ++cont
+            p.innerText = cont
+        }
+
+        function enter(){
+            div1.style.border = '5px solid brown'
+        }
+
+        function leave() {
+            div1.style.border = 'none'
+            div1.style.backgroundColor = 'brown'
+        }
+    </script>
+
+</body>
+</html>

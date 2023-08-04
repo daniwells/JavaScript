@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        button:hover {
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Working With Data</title>
+</head>
+<body>
+    <h1>Enter Your Name</h1>
+    <button class="but" onclick="press()" >Press to the button!!</button>
+    <p>The result goes here:</p>
+
+    <script>
+        function press(){
+
+            var name = window.prompt("What's your name")
+
+            var but = document.querySelector('button.but')
+            var result = document.getElementsByTagName('p')[0]
+
+            result.innerHTML = `Nice to meet you, ${name}.`
+        }
+    </script>
+
+</body>
+</html>
