@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input#but {
+            padding: 30px;
+        }
+
+        #but:hover{
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Seasons</title>
+</head>
+<body>
+    <h1>Seasons in Brasil</h1>
+
+    <input type="button" name="but" id="but" value="Click Me To Start" onclick="press()" >
+
+    <p>Result is here...</p>
+
+    <script>
+        function press(){
+            var result = document.getElementsByTagName('p')[0]
+            var month = Number.parseInt(window.prompt('Enter a month by number:(1 to 12)'))
+
+            if (month >= 10 && month <= 12){
+                result.innerHTML = "It's SPRING"
+            }else if (month >= 7 && month <= 9){
+                result.innerHTML = "It's WINTER"
+
+            }else if (month >= 4 && month <= 6) {
+                result.innerHTML = "It's FALL"
+
+            }else if (month >= 1 && month <= 3){
+                result.innerHTML = "It's SUMMER"
+
+            }else{
+                result.innerHTML = "Do you typed incorrect values! Try again."
+            }
+
+        }
+    </script>
+
+</body>
+</html>

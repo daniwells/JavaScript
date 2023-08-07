@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input#but {
+            padding: 20px;
+        }
+
+    </style>
+    <title>Divination Game</title>
+</head>
+<body>
+    <h1>Divination Game</h1>
+    <p>The value sorted is between 0 to 10...</p>
+
+    <input type="button" name="but" id="but" value="Click me" onclick="sorted()" >
+
+    <p>Result is here...</p>
+
+    <script>
+        function sorted(){
+            var result = document.getElementsByTagName('p')[1]
+            var valuePlayer = Number.parseInt(window.prompt('Enter a number:'))
+
+            var valuePC = Math.floor(Math.random() * 11)
+
+            if (valuePlayer == valuePC){
+                result.innerHTML = 'PLAYER WIN!!!'
+            }else{
+                result.innerHTML = 'PLAYER LOSE!'
+            }
+
+            result.innerHTML += `</br>PC: ${valuePC}`
+            result.innerHTML += `</br>PLAYER: ${valuePlayer}`
+
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input#but {
+            padding: 30px;
+        }
+
+        #but:hover{
+            cursor: pointer;
+        }
+
+    </style>
+    <title>Calculation</title>
+</head>
+<body>
+    <h1>Calculation</h1>
+
+    <input type="button" name="but" id="but" value="Click Me To Start" onclick="calculate()" >
+
+    <p>Result is here...</p>
+
+    <script>
+        function calculate(){
+            var result = document.getElementsByTagName('p')[0]
+            var n1 = Number.parseFloat(window.prompt('Enter the first number:'))
+            var n2 = Number.parseFloat(window.prompt('Enter the scond number:'))
+
+            var calculation = Number.parseInt(window.prompt("[1] SUM // [2] SUBTRACTION // [3] MULTIPLICATION // [4] DIVISION"))
+
+
+            if (calculation == 1){
+                let r = n1 + n2
+                result.innerHTML = `The sum between ${n1} and ${n2} is ${r}`
+            }else if (calculation == 2){
+                let r = n1 - n2
+                result.innerHTML = `The subtraction between ${n1} and ${n2} is ${r}`
+            }else if (calculation == 3){
+                let r = n1 * n2
+                result.innerHTML = `The multiplication between ${n1} and ${n2} is ${r}`
+            }else if (calculation == 4){
+                let r = n1 / n2
+                result.innerHTML = `The division between ${n1} and  ${n2} is ${r}`
+            }else{
+                result.innerHTML = 'Do you typed a incorrect option! Try again.'
+            }
+
+
+        }
+    </script>
+
+</body>
+</html>
