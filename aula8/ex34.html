@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Multiplication Table</h1>
+    <label for="number">Number: </label>
+    <input type="number" name="number" placeholder="Enter a Number">
+    <input type="button" value="Press to Calculate" onclick="press()">
+    <p id="result">The result goes here</p>
+
+    <script>
+        function press() {
+            var num = document.getElementsByName('number')[0]
+            n = Number(num.value)
+
+            var result = document.querySelector('p#result')
+
+            result.innerHTML = `<strong>Table of ${n}:</strong>`
+            for (var c = 0; c <= 10; c++){
+                r = c * n
+                result.innerHTML += `<p>${n} X ${c} = ${r}</p> `
+            }
+        }
+            
+        
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>COUNTING</h1>
+    <label for="value">Final Value: </label>
+    <input type="Number" placeholder="Enter a Value" name="value">
+    <input type="button" value="Count" onclick="count()">
+
+    <script>
+        function count(){
+            var number = document.getElementsByTagName('input')[0]
+            var  n = Number(number.value)
+
+            if (n > 0){
+                var body = document.body
+                var h2 = document.createElement('h2')
+                var subtitle = document.createTextNode(`count from 0 to ${n}`)
+                h2.appendChild(subtitle)
+                body.appendChild(h2)
+
+                var p = document.createElement('p')
+                var num = ''
+                for (var c = 0; c <= n; c++){  
+                    num = document.createTextNode(`${c} -> `)
+                    if (c == n){
+                        num = document.createTextNode('END!')
+                    }
+                    p.appendChild(num)  
+                }
+                body.appendChild(p) 
+            }else{
+                var body = document.body
+                var h2 = document.createElement('h2')
+                var subtitle = document.createTextNode(`count from 0 to ${n}`)
+                h2.appendChild(subtitle)
+                body.appendChild(h2)
+
+                var p = document.createElement('p')
+                var num = ''
+                for (c = n; c <= 0; c++){  
+                    num = document.createTextNode(`${c} -> `)
+                    if (c == 0){
+                        num = document.createTextNode('END!')
+                    }
+                    p.appendChild(num)  
+                }
+                body.appendChild(p) 
+            }
+        }
+    </script>
+</body>
+</html>
