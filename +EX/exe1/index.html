@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(139, 112, 182);
+            flex-direction: column;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            font-size: 55px;
+            color: white;
+        }
+
+        main {
+            background-color: white;
+            width: 35%;
+            border-radius: 25px;
+            overflow: hidden;
+            padding: 30px;
+            
+        }
+        
+        input.num {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 170px;
+            padding: 3px;
+        }
+
+        input.but{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+
+        label.lab{
+            font-size: 25px;
+        }
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <head><h1>COUNTING</h1></head>
+    <main>
+        <form action="index.js" method="get">
+            <label for="start" class="lab">Start: </label>
+            <input type="number" name="start" class="num">
+            <br>
+            <label for="final" class="lab">Final: </label>
+            <input type="number" name="final" class="num">
+            <br>
+            <label for="step" class="lab">Step: </label>
+            <input type="number" name="step" class="num">
+
+            <br>
+
+            <input type="button" value="PRESS TO COUNT" class="but" name="but" onclick="press()">
+
+            <p>The result was here...</p>
+        </form>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
